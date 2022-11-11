@@ -8,9 +8,11 @@ public class RunSpring {
                 "applicationContext.xml"
         );
 
-        Music music = context.getBean("musicBean", Music.class);
+        //Music music = context.getBean("musicBean", Music.class);
+        //MusicPlayer musicPlayer = new MusicPlayer(music);
 
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+        //DI using constructor
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
         musicPlayer.playMusic();
 
