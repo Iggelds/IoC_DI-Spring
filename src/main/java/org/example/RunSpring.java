@@ -8,22 +8,19 @@ public class RunSpring {
                 "applicationContext.xml"
         );
 
-        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        Music music1 = context.getBean("rockMusic", Music.class);
+//        MusicPlayer rockMusicPlayer = new MusicPlayer(music1);
+//        rockMusicPlayer.playMusic();
+//
+//        Music music2 = context.getBean("classicalMusic", Music.class);
+//        MusicPlayer claccicalMusicPlayer = new MusicPlayer(music2);
+//        claccicalMusicPlayer.playMusic();
 
-        boolean comparison = firstMusicPlayer == secondMusicPlayer;
-        System.out.println(comparison);
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        musicPlayer.playMusic();
 
-        System.out.println(firstMusicPlayer);
-        System.out.println(secondMusicPlayer);
-
-        firstMusicPlayer.setVolume(10);
-        System.out.println(firstMusicPlayer.getVolume());
-        System.out.println(secondMusicPlayer.getVolume());
-
-        //        System.out.println(musicPlayer.getName());
-//        System.out.println(musicPlayer.getVolume());
-
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
         context.close();
     }
 }
